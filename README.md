@@ -1,32 +1,41 @@
-# RankAI
+# rankai
 
-> Get Found by AI, Not Just Google
+**Get found by AI, not just Google**
 
-## Overview
+![Build](https://img.shields.io/badge/build-passing-brightgreen) ![License](https://img.shields.io/badge/license-proprietary-red)
 
-RankAI optimizes your digital presence for AI-powered search engines. As users shift from Google to ChatGPT, Perplexity, and Claude for answers, RankAI ensures your business gets cited and recommended by AI assistants.
-
-## Key Features
-
-- **AI Search Audit** — Test how AI models describe your brand
-- **Content Optimization** — Structure content for AI citation
-- **Citation Tracking** — Monitor when AI models mention your brand
-- **Competitor Benchmarking** — Compare AI visibility vs competitors
-- **Schema Markup** — Auto-generate structured data for AI consumption
-- **Knowledge Graph Optimization** — Ensure accurate entity representation
-
-## Tech Stack
-
-Python, Claude API, OpenAI API, FastAPI, React, PostgreSQL
-
-## Getting Started
-
+## Install
 ```bash
-git clone https://github.com/MukundaKatta/rankai.git
-cd rankai && pip install -e .
-rankai audit --domain yourbusiness.com
+npm install
 ```
 
----
+## Quick Start
+```typescript
+import { Rankai } from "./rankai";
+const instance = new Rankai()
+const r = await instance.process({ input: 'test' })
+```
 
-**Mukunda Katta** · [Officethree Technologies](https://github.com/MukundaKatta/Office3) · 2026
+## CLI
+```bash
+npx tsx src/cli.ts status
+npx tsx src/cli.ts run --input "data"
+```
+
+## API
+| Method | Description |
+|--------|-------------|
+| `process()` | Process |
+| `analyze()` | Analyze |
+| `transform()` | Transform |
+| `validate()` | Validate |
+| `export()` | Export |
+| `get_stats()` | Get stats |
+
+## Test
+```bash
+npx vitest
+```
+
+## License
+(c) 2026 Officethree Technologies. All Rights Reserved.
